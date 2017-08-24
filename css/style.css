@@ -1,0 +1,314 @@
+/*
+COMPLETE CSS FILE FOR PRODUCT HUNT REPLICA
+*/
+
+
+/* ----- BODY ----- */
+body, h1, h2, h3, h4 , h5, h6, p, a {
+	font-size: 75%; /* 1.2em per 10px */
+	margin: 0;
+	padding: 0;
+	line-height: 1.1;
+	box-sizing: border-box;
+	font-family: 'Ubuntu', sans-serif;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+div.page-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+}
+
+
+
+/* ----- PAGE CONTAINER / META CONTAINER ----- */
+div.page-container {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+/* ----- HEADER -----*/
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	width: 70%;
+	margin: 0 auto;
+	padding: 1em;
+}
+/*Left circle icon with P in middle*/
+header a.left-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5em;
+	height: 2.5em;
+	background-color: #DA552F;
+	border-radius: 50%;
+
+	font-size: 1.4em;
+	font-weight: 300;
+	color: #fff;
+}
+/*Product Hunt - header text*/
+header h1.logo-header-text {
+	font-size: 1.5em;
+	font-weight: 500;
+	letter-spacing: -0.5px;
+	margin-left: 0.7em;
+	color: #DA552F;
+}
+/*Header is split into 2 divs to space out the content*/
+header div.header-justify {
+	display: flex;
+	align-items: center;
+	width: 50%;
+}
+/*Right div (left Div does not need justifying....yet)*/
+header div.justify-right {
+	display: flex;
+	justify-content: flex-end;
+}
+/*Search Bar + contents*/
+header div.search-bar-container {
+	display: flex;
+	align-items: center;
+
+	width: 19em;
+	height: 2.8em;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 2em;
+	opacity: 0.5;
+}
+/*Actual search bar containing placeholder*/
+input.search-bar {
+	border: none;
+	outline: none;
+}
+/* .fa // FONT-AWESOME*/
+header div i.fa {
+	font-size: 1.5em;
+	opacity: 0.2;
+}
+header div i.fa-search:before {
+	margin-right: 0.5em;
+	padding-left: 0.5em;
+}
+/*Log In text*/
+header a.log-in-text {
+	font-size: 1.6em;
+	color: rgba(0, 0, 0, 0.2);
+	margin-left: 1.2em;
+}
+/* Log in text mouse hover color change */
+header a.log-in-text:hover {
+	color: #3f85ff;
+}
+/*Orange button on right hand sign with + in the middle..*/
+header div a.create-acc-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 2em;
+	height: 2em;
+	margin-left: 1.5em;
+	background-color: #DA552F;
+	border-radius: 50%;
+
+	font-size: 1.2em;
+	font-weight: 300;
+	color: #fff;
+}
+
+
+
+/* ----- NAVIGATION ----- */
+/* Meta container for Nav Bar */
+div.nav-container {
+	display: flex;
+
+	width: 100%;
+}
+/* Nav Bar itself */
+div nav.nav-bar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	width: 100%;
+	height: 4em;
+	border-top: 1.5px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+	opacity: 0.9;
+}
+/* Un-ordered list */
+nav ul.page-list {
+	width: 70%;
+	margin: 0 auto;
+}
+/* Un-ordered list items */
+nav ul.page-list li {
+	display: inline-block;
+	/*color: #E6E6E6;*/
+	font-size: 1.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+nav ul.page-list li a {
+	color: rgba(0, 0, 0, 0.3);
+	padding: 0.9em 0;
+}
+/* 2nd list item, padded out.  */
+ul.page-list li:nth-child(2) {
+	padding: 0 1.5em;
+}
+/* List items, blue border on hover */
+ul.page-list li a:hover {
+	color: #3f85ff;
+	border-bottom: 2.5px solid #3f85ff;
+}
+ul.page-list li a:visted {
+	color: #E6E6E6;
+}
+
+
+
+
+/* ----- PAGE CONTENT ----- */
+
+/* Page content meta container */
+content.page-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 100%;
+	margin: 0 auto;
+}
+/* Daily header TODAY / TOMORROW ETC */
+content div.content-heading {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+
+	width: 100%;
+	padding: 1.5em 0;
+	letter-spacing: -0.8px;
+}
+/* DAY syling */
+div.content-heading h2 {
+	font-size: 1.8em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+/* DATE styling */
+div.content-heading p {
+	font-size: 1.2em;
+	font-weight: 500;
+	margin-left: 0.5em;
+	text-transform: uppercase;
+	opacity: 0.3;
+}
+/* Content article(s) container */
+content div.content {
+	display: flex;
+	flex-direction: column;
+
+	width: 70%;
+	margin: 0 auto 1.5em;
+	box-sizing: border-box;
+}
+/* NOTE: Each article 'line' is split up into rows.
+				 Each row is split into 3 seperate divs 
+				 (left, middle, right) and any necessary
+				 handle divs */
+content section.article-line {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 1em;
+	padding-left: 1.8em;
+}
+/* Left div container holding carret-up and integer */
+section div.content-left {
+	display: flex;
+	flex: 0 0 23px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0.8em;
+}
+/* Middle div container containing article name and description */
+section div.content-middle {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+
+	padding: 0.7em;
+}
+/* Right div container containing 'fa-comment-o' */
+section div.content-right {
+	display: flex;
+	flex: 0 0 150px;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+/* Styles all H2 tags within the 'Contents Article(s) Container' */
+div.content h2 {
+	font-size: 1.6em;
+	font-weight: 700;
+	letter-spacing: -1px;
+	padding-bottom: 0.3em;
+	opacity: 0.7;
+}
+/* Styles all P tags within the 'Contents Article(s) Container' */
+div.content p {
+	font-size: 1.1em;
+	font-weight: 500;
+	opacity: 0.4;
+}
+div.content-left .fa {
+	font-size: 15px;
+}
+/* Styles all H2 tags within the 'Left div container' */
+div.content-left p {
+	font-size: 0.85em;
+	opacity: 1;
+}
+/* Handle Div within the 'Left div container' */
+div.content-left .content-left-handle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+div.content-right div.content-right-icon {
+	width: 4em;
+	height: 4em;
+	margin-right: 1.8em;
+	border-radius: 50%;
+
+	background-image: url("../images/doge-icon.png");
+	background-size: 35px 35px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+div.content-right .fa {
+	font-size: 18px;
+	opacity: 0.3;
+}
+div.content-right p {
+	margin-left: 0.8em;
+}
